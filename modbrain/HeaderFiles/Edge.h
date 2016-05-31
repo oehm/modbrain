@@ -6,20 +6,21 @@ class Node;
 
 class Edge
 {
-private:
+public:
 
 	Node* _targetNode;
 	float _weigth;
 	int _delay;
 	int _currentDelay;
 
-public:
+
+	Node* GetTargetNode();
 
 	void OnUpdate();
 
 	void OnFire();
 
-	Edge(Node* targetNode, float weigth = 0.1f, int delay = 0, int currentDelay = 0);
+	Edge(Node* targetNode, float weigth = 0.1f, int delay = 0, int currentDelay = -1);
 
 	~Edge();
 };

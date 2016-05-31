@@ -158,12 +158,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="SourceFiles\Globals.cpp" />
     <ClCompile Include="SourceFiles\Edge.cpp" />
     <ClCompile Include="SourceFiles\main.cpp" />
     <ClCompile Include="SourceFiles\Module.cpp" />
     <ClCompile Include="SourceFiles\Node.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HeaderFiles\Globals.h" />
     <ClInclude Include="HeaderFiles\Edge.h" />
     <ClInclude Include="HeaderFiles\Module.h" />
     <ClInclude Include="HeaderFiles\Node.h" />

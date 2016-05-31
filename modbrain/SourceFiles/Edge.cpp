@@ -1,8 +1,15 @@
+#include <iostream>
 #include "Edge.h"
 
 
+Node* Edge::GetTargetNode()
+{
+	return _targetNode;
+}
+
 void Edge::OnUpdate()
 {
+
 	if (_currentDelay == 0) {
 		_targetNode->AddToLevel(_weigth);
 	}
@@ -11,6 +18,8 @@ void Edge::OnUpdate()
 
 void Edge::OnFire()
 {
+	
+
 	if (_currentDelay > 0) {
 		_currentDelay = _currentDelay / 2;
 	}
@@ -26,6 +35,7 @@ Edge::Edge(Node* targetNode, float weigth, int delay, int currentDelay) :
 	_delay(delay),
 	_currentDelay(currentDelay)
 {
+	std::cout << "created edge with: _weigth: " << _weigth << " _targetNode: " << _targetNode << " _delay: " << _delay << " _currentDelay: " << _currentDelay << std::endl;
 }
 
 
